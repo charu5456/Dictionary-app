@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Kite+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Artifika&family=Gafata&family=Zilla+Slab+Highlight:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Artifika&family=Zilla+Slab+Highlight:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight:wght@700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar {
+    width: 1152px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+.navbar h1{
+  font-family: 'Cinzel Decorative', cursive;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.navbar h1 span{
+  text-transform: lowercase;
+  font-family: 'Petit Formal Script', cursive;
+  color: #fdcaaa;
+  
+}
+nav {
+  color: #fff;
+  padding: 12px;
+  font-weight: bold;
+  background:  linear-gradient(90deg, rgba(0,0,0,1) 21%, rgb(0, 21, 88) 77%, rgba(39,65,78,1) 100%);
+}
+  
+.container {
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url(4.jpg);
+  background-size: cover;
+  
+  background-repeat: no-repeat;
+  height: 91.8vh;
+}
+ 
+.search-field {
+  font-size: 17px;
+  color: #1e1e1e;
+  border-radius: 50px;
+  border: 2px dotted white;
+  background: #000000b0;
+  color: #fff;
+  outline: none;
+  width: 520px;
+  padding: 10px;
+}
+.search-field:hover{
+  color: #020202;
+  background-color: #85FFBD;
+background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+
+  border: 2px black solid;
+}
+.texts {
+  
+  font-size: 50px;
+  letter-spacing: 2px;
+  font-weight: 900;
+  text-decoration: 1px solid underline;
+ 
+  margin-bottom: 12px;
+  color: rgb(255, 255, 255);
+  font-family: 'Cinzel Decorative', cursive;
+}
+  
+.result {
+  margin-top: 20px;
+  width: 720px;
+  height: 470px;
+  border-radius: 5px;
+  padding: 20px;
+  overflow-y: scroll;
+  background-color: #85FFBD;
+  background-image: linear-gradient( 135deg, #92FFC0 10%, #002661 100%);
+  border-right: 10px solid #f0b800;
+  border-bottom: 10px solid #eb8f57;
+  display: none;
+}
+ 
+.result > h1 {
+  font-weight: 300;
+  display: inline;
+  margin-right: 10px;
+  font-family: 'Artifika', serif;
+  font-size: 40px;
+}
+  
+.result > p {
+  margin-bottom: 20px;
+  font-size: 25px;
+  letter-spacing: 1px;
+  font-weight: 900;
+  font-family: 'Gafata', sans-serif;
+  display: inline-block;
+}
+  
+.phonetics {
+  border-radius: 50px;
+  background: linear-gradient(90deg, rgba(121,46,9,1) 35%, rgba(200,83,0,1) 100%);
+
+  color: #fff;
+  padding: 2px 10px;
+}
+  
+.result > audio {
+  width: 100%;
+  outline: none;
+  
+  margin-bottom: 20px;
+  display: block;
+}
+  
+.meaningheading {
+  font-weight: 500;
+}
+.synonyms{
+  font-size: 15px;
+  flex-wrap: nowrap;
+  font-weight: 900;
+  font-family: 'Artifika', serif;
+}
+.bubbles img{
+  width: 50px;
+  animation: bubble 7s linear infinite;
+ 
+}
+.bubbles{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  bottom: -0px;
+ 
+}
+@keyframes bubble{
+  0% {
+      transform: translateY(0);
+      opacity: 0;
+  }
+  50% {
+     
+      opacity: 1;
+  }
+  70% {
+     
+      opacity: 1;
+  }
+  100% {
+      transform: translateY(-80vh);
+      opacity: 0;
+  }
+}
+.bubbles img:nth-child(1){
+  animation-delay: 2s;
+  width: 75px;
+}
+.bubbles img:nth-child(2){
+  animation-delay: 1s;
+  width: 95px;
+}
+.bubbles img:nth-child(3){
+  animation-delay: 3s;
+  width: 50px;
+}
+.bubbles img:nth-child(4){
+  animation-delay: 4.5s;
+  width: 35px;
+}
+.bubbles img:nth-child(5){
+  animation-delay: 6.1s;
+}
+.bubbles img:nth-child(6){
+  animation-delay: 5.5s;
+  width: 30px;
+}
+.bubbles img:nth-child(7){
+  animation-delay: 7s;
+  width: 65px;
+}
+
+  
+ @media only screen and (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+  .search-field {
+    width: 100%;
+  }
+  .result {
+    width: 100%;
+  }
+}
